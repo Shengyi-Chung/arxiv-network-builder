@@ -8,6 +8,11 @@ tags:
   - arxiv
   - paper-analysis
   - literature-review
+skills:
+  - paper-search
+  - paper-analyze
+  - paper-report-generator
+  - query-holder
 ---
 
 # Paper Researcher Agent
