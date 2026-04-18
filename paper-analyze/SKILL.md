@@ -1,6 +1,6 @@
 ---
 name: paper-analyze
-description: "Analyze and rank papers by relevance. Trigger: '分析这批论文的相关性', '按相关性排名这些论文', '提取论文的关键贡献和方法'"
+description: "Analyze and rank papers by relevance. Trigger: 'analyze these papers', 'rank papers by relevance', 'extract key contributions and methods', 'analyze the papers'"
 author: Shengyi-Chung
 version: 1.0.0
 tags:
@@ -107,9 +107,9 @@ Store the complete analysis in `/data/paper_analysis.json`:
 - Triggered after paper-search completes and user requests analysis
 
 **Specific Queries:**
-- "分析这批论文的相关性"
-- "按相关性排名这些论文"
-- "提取论文的关键贡献和方法"
+- "analyze these papers"
+- "rank papers by relevance"
+- "extract key contributions and methods"
 
 ## Error Handling
 

@@ -1,6 +1,6 @@
 ---
 name: paper-search
-description: "Build social networks from arXiv papers. Trigger: '查找关于 [关键词] 的最新论文', '分析 [领域] 的学者关系', '搜索本周关于 [主题] 的新论文', '构建 [领域] 的合作网络图'"
+description: "Search arXiv papers and build author collaboration networks. Trigger: 'search for papers about [keyword]', 'find latest papers on [topic]', 'build a collaboration network for [domain]', 'search [N] papers about [topic]'"
 author: Shengyi-Chung
 version: 1.0.0
 tags:
@@ -21,8 +21,8 @@ A specialized Skill that automates arXiv paper retrieval via arXiv API and const
 Extract the search keywords from the user's request. Identify the target research domain or topic.
 
 **Examples:**
-- "深度学习" → search query: "deep learning"
-- "图神经网络" → search query: "graph neural network"
+- "deep learning" → search query: "deep learning"
+- "graph neural network" → search query: "graph neural network"
 
 ### Step 2: Query arXiv API
 Use the arXiv API to fetch papers matching the query.
