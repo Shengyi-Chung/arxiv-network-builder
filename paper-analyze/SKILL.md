@@ -1,5 +1,5 @@
 ---
-name: paper-analyzer
+name: paper-analyze
 description: "Deep semantic analysis for arXiv papers. Trigger: '总结这篇论文的主要贡献', '这周哪些论文提出了全新的算法模型？', '分析论文的新颖度和创新点'"
 author: Shengyi-Chung
 version: 1.0.0
