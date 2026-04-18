@@ -1,5 +1,5 @@
 ---
-name: arxiv-network-builder
+name: paper-search
 description: "Build social networks from arXiv papers. Trigger: '查找关于 [关键词] 的最新论文', '分析 [领域] 的学者关系', '搜索本周关于 [主题] 的新论文', '构建 [领域] 的合作网络图'"
 author: Shengyi-Chung
 version: 1.0.0
