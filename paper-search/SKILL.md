@@ -10,7 +10,7 @@ tags:
   - graph-construction
 ---
 
-# arxiv-network-builder
+# paper-search
 
 ## Role
 A specialized Skill that automates arXiv paper retrieval via arXiv API and constructs social network graphs from author collaborations.
@@ -80,9 +80,31 @@ Store the structured network data as JSON files:
 | Error | Handling |
 |-------|----------|
 | No papers found | Inform user and suggest broader keywords |
-| API timeout | Retry once, then report failure |
+| API timeout | Retry once with exponential backoff, then report failure |
 | Invalid query | Ask user to rephrase the search terms |
 | Too many results | Limit to 100 papers and notify user |
+| Rate limit (429) | Wait 60 seconds, use exponential backoff |
+
+## Performance Optimization
+
+### Batch Processing
+- Group queries by topic/domain when possible
+- Use arXiv API's `max_results` parameter to control batch size (recommended: 50 per request)
+- Prioritize recent papers by setting `sortBy=submittedDate`
+
+### Concurrent Requests
+- When querying multiple topics, make requests sequentially to avoid rate limiting
+- Wait at least **3 seconds** between each API call
+
+### Caching Strategy
+- Cache search results for the same query for 24 hours
+- Store in `/data/cache/` directory with query hash as filename
+- Skip API call if valid cache exists
+
+### Rate Limiting
+- arXiv API allows ~3 requests per 5 minutes
+- If rate limited (429 response), wait 60 seconds and retry
+- Log rate limit events for monitoring
 
 ## Output Format
 
