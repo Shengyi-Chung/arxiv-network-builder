@@ -8,11 +8,12 @@ tags:
   - arxiv
   - paper-analysis
   - literature-review
-skills:
-  - paper-search
-  - paper-analyze
-  - paper-report-generator
-  - query-holder
+metadata:
+  openclaw:
+    requires:
+      bins:
+        - python3
+        - curl
 ---
 
 # Paper Researcher Agent
